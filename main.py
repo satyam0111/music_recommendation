@@ -46,22 +46,22 @@ with st.container():
         )
         acousticness = st.slider(
             'Acousticness',
-            0.0, 1.0, 0.5)
+            0.0, 1.0, 0.0)
         danceability = st.slider(
             'Danceability',
-            0.0, 1.0, 0.5)
+            0.0, 1.0, 0.0)
         energy = st.slider(
             'Energy',
-            0.0, 1.0, 0.5)
+            0.0, 1.0, 0.0)
         instrumentalness = st.slider(
             'Instrumentalness',
             0.0, 1.0, 0.0)
         valence = st.slider(
             'Valence',
-            0.0, 1.0, 0.45)
+            0.0, 1.0, 0.0)
         tempo = st.slider(
             'Tempo',
-            0.0, 244.0, 118.0)
+            0.0, 244.0, 0.0)
 
         
 tracks_per_page = 6
