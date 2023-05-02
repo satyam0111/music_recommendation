@@ -62,6 +62,7 @@ with st.container():
         tempo = st.slider(
             'Tempo',
             0.0, 244.0, 118.0)
+
         
 tracks_per_page = 6
 test_feat = [acousticness, danceability, energy, instrumentalness, valence, tempo]
@@ -82,26 +83,22 @@ if 'start_track_i' not in st.session_state:
     st.session_state['start_track_i'] = 0
 
 with st.container():
-    col1, col2, col3 = st.columns([2,1,2])
+    col1, col2, col3 = st.columns([1,1,1])
     if st.button("Recommend More Songs"):
         if st.session_state['start_track_i'] < len(tracks):
             st.session_state['start_track_i'] += tracks_per_page
-current_tracks = tracks[st.session_state['start_track_i']: st.session_state['start_track_i'] + tracks_per_page]
-current_audios = audios[st.session_state['start_track_i']: st.session_state['start_track_i'] + tracks_per_page]
-if st.session_state['start_track_i'] < len(tracks):
-            for i, (track, audio) in enumerate(zip(current_tracks, current_audios)):
-                if i%2==0:
-                    with col1:
-                        components.html(
-                            track,
-                            height=400,
-                    )
-        
+    current_tracks = tracks[st.session_state['start_track_i']: st.session_state['start_track_i'] + tracks_per_page]
+    current_audios = audios[st.session_state['start_track_i']: st.session_state['start_track_i'] + tracks_per_page]
+    if st.session_state['start_track_i'] < len(tracks):
+        for i, (track, audio) in enumerate(zip(current_tracks, current_audios)):
+            if i % 3 == 0:
+                with col1:
+                    components.html(track, height=400)
+            elif i % 3 == 1:
+                with col2:
+                    components.html(track, height=400)
             else:
                 with col3:
-                    components.html(
-                        track,
-                        height=400,
-                    )
-else:
+                    components.html(track, height=400)
+    else:
         st.write("No songs left to recommend")
