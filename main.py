@@ -31,13 +31,13 @@ title = "GenreX"
 st.title(title)
 st.write("Your own Soulful Studio 🎵")
 st.markdown(
-    """
+    
     <style>
     body {
         background-color: #504099;
     }
     </style>
-    """,
+    
     unsafe_allow_html=True
 )
 with st.container():
