@@ -27,7 +27,7 @@ def n_neighbors_uri_audio(genre, start_year, end_year, test_feat):
     audios = genre_data.iloc[n_neighbors][audio_feats].to_numpy()
     return uris, audios
 
-title = "GenreX"
+title = "Sargam"
 st.title(title)
 st.write("Your own Soulful Studio 🎵")
 st.markdown("##")
