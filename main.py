@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(page_title="Vibonic", layout="wide")
+st.set_page_config(page_title="Sargam", layout="wide")
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 import plotly.express as px
@@ -29,8 +29,9 @@ def n_neighbors_uri_audio(genre, start_year, end_year, test_feat):
 
 title = "GenreX"
 st.title(title)
-st.write("First of all, welcome! This is the place where you can customize what you want to listen to based on genre and several key audio features. Try playing around with different settings and listen to the songs recommended by VIBONIC!")
+st.write("Your own Soulful Studio 🎵")
 st.markdown("##")
+st.background
 with st.container():
     col1, col2,col3,col4 = st.columns((2,0.5,0.5,0.5))
     with col3:
