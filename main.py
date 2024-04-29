@@ -1,5 +1,5 @@
 import streamlit as st
-st.set_page_config(page_title="Sargam", layout="wide")
+st.set_page_config(page_title="GenreX", layout="wide")
 import pandas as pd
 from sklearn.neighbors import NearestNeighbors
 import plotly.express as px
@@ -27,7 +27,7 @@ def n_neighbors_uri_audio(genre, start_year, end_year, test_feat):
     audios = genre_data.iloc[n_neighbors][audio_feats].to_numpy()
     return uris, audios
 
-title = "Sargam"
+title = "GenreX"
 st.title(title)
 st.write("Your own Soulful Studio 🎵")
 st.markdown("##")
